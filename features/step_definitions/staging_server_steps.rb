@@ -18,3 +18,13 @@ When(/^I change to pending testing with "(.*?)" and "(.*?)"$/) do |issue, progra
   select 'Pending Testing', from: 'Status'
   click_button 'Update Server'
 end
+
+When(/^I change to testing with tester "(.*?)" and testing started at "(.*?)"$/) do |tester, test_started_at|
+  visit servers_path
+  click_on @server.name
+  fill_in 'Tester', with: tester
+  fill_in 'Test started at', with: test_started_at
+  select 'Testing', from: 'Status'
+  click_button 'Update Server'
+end
+

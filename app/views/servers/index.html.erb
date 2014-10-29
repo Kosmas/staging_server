@@ -1,3 +1,4 @@
 <% @servers.each do |server| %>
-  <%= link_to server.name, edit_server_path(server)  %> - <%= server.status %> - <%= server.issue %> - <%= server.programmer %></p>
+  <%= link_to server.name, edit_server_path(server)  %> - <%= server.status %> - <%= server.issue %> - <%= server.programmer %>
+  - <%= server.tester %> - <%= server.test_started_at %></p>
 <% end %>

@@ -10,3 +10,10 @@ Feature: See staging server status
     Then I should see "Server 2 - Pending Testing"
     And I should see "Issue 1"
     And I should see "John"
+
+  Scenario: Change status from pending testing to testing
+    Given there is a staging server named "Server 3" with status "Pending Testing"
+    When I change to testing with tester "Tester One" and testing started at "2014-10-29 10:00:00"
+    Then I should see "Server 3 - Testing"
+    And I should see "Tester One"
+    And I should see "2014-10-29 10:00:00"

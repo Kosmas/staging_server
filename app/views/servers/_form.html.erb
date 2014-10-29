@@ -8,10 +8,20 @@
     <%= f.label :programmer %><br />
     <%= f.text_field :programmer %>
   </p>
+  
+  <p>
+    <%= f.label :tester %><br />
+    <%= f.text_field :tester %>
+   </p>
 
   <p>
+    <%= f.label :test_started_at %><br />
+    <%= f.text_field :test_started_at %>
+  </p>
+    
+  <p>
     <%= f.label :status %><br />
-    <%= f.select(:status, ['Available', 'Pending Testing']) %>
+    <%= f.select(:status, ['Available', 'Pending Testing', 'Testing']) %>
   </p>
 
 
