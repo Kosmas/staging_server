@@ -41,4 +41,5 @@ gem 'spring',        group: :development
 # Testing gems
 gem 'cucumber-rails','~> 1.4.2',  group: :test
 gem 'database_cleaner', '~> 1.3.0', group: :test
+gem 'factory_girl', '~> 4.5.0', group: :test
 gem 'rspec-rails', '~> 3.1.0', group: [:test, :development]
