@@ -16,7 +16,7 @@ class ServersController < ApplicationController
   private
 
   def server_params
-    params.require(:server).permit(:issue, :programmer, :status, :tester, :test_started_at)
+    params.require(:server).permit(:issue, :programmer, :status, :tester, :test_started_at, :approved_at)
   end
   
   def set_server

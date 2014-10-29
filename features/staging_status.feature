@@ -17,3 +17,9 @@ Feature: See staging server status
     Then I should see "Server 3 - Testing"
     And I should see "Tester One"
     And I should see "2014-10-29 10:00:00"
+
+  Scenario: Change status from testing to accepted
+    Given there is a staging server named "Server 4" with status "Testing"
+    When I change to approved
+    Then I should see "Server 4 - Approved"
+    And I should see the current time

@@ -28,3 +28,13 @@ When(/^I change to testing with tester "(.*?)" and testing started at "(.*?)"$/)
   click_button 'Update Server'
 end
 
+When(/^I change to approved$/) do
+  visit servers_path
+  click_on @server.name
+  select 'Approved', from: 'Status'
+  click_button 'Update Server'
+end
+
+Then(/^I should see the current time$/) do
+  expect(page).to have_content(DateTime.now.utc)
+end

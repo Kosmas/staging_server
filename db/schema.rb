@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141029160645) do
+ActiveRecord::Schema.define(version: 20141029162904) do
 
   create_table "servers", force: true do |t|
     t.string   "name"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20141029160645) do
     t.string   "programmer"
     t.string   "tester"
     t.datetime "test_started_at"
+    t.datetime "approved_at"
   end
 
 end
