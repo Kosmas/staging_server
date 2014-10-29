@@ -21,7 +21,7 @@
     
   <p>
     <%= f.label :status %><br />
-    <%= f.select(:status, ['Available', 'Pending Testing', 'Testing', 'Approved']) %>
+    <%= f.select(:status, Server::STATUSES) %>
   </p>
 
 

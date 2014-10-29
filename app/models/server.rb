@@ -1,5 +1,6 @@
 class Server < ActiveRecord::Base
   before_update :update_relevant_fields
+  STATUSES = ['Available', 'Pending Testing', 'Testing', 'Approved']
 
   def update_relevant_fields
     case status
