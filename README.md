@@ -2,21 +2,21 @@
 
 ## Installation
 
-* Clone the application:
+Clone the application:
 
     git clone git@github.com:Kosmas/staging_server.git
 
-* Rund bundle install
+Run bundle install
 
-* Run migrations
+Run migrations
 
     rake db:migrate
 
-* Populate the database with seed records
+Populate the database with seed records
 
     rake db:seed
 
-* Run existing tests
+Run existing tests
 
     cucumber
-    rake spec
+
