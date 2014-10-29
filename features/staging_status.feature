@@ -13,10 +13,10 @@ Feature: See staging server status
 
   Scenario: Change status from pending testing to testing
     Given there is a staging server named "Server 3" with status "Pending Testing"
-    When I change to testing with tester "Tester One" and testing started at "2014-10-29 10:00:00"
+    When I change to testing with tester "Tester One" and testing started now
     Then I should see "Server 3 - Testing"
     And I should see "Tester One"
-    And I should see "2014-10-29 10:00:00"
+    And I should see the current time
 
   Scenario: Change status from testing to accepted
     Given there is a staging server named "Server 4" with status "Testing"

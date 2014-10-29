@@ -1,5 +1,5 @@
 <% @servers.each do |server| %>
   <%= link_to server.name, edit_server_path(server)  %> - <%= server.status %> - 
   <%= server.issue %> - <%= server.programmer %>  - <%= server.tester %> - 
-  <%= server.test_started_at %> - <%= server.approved_at.localtime.strftime("%Y-%m-%d %H:%M:%S") unless server.approved_at.nil?  %></p>
+  <%= format_datetime(server.test_started_at) %> - <%= format_datetime(server.approved_at)  %></p>
 <% end %>
