@@ -7,18 +7,4 @@ class Server < ActiveRecord::Base
     when 'Available' then self.issue, self.programmer, self.tester, self.test_started_at, self.approved_at = '','','','',''
     end
   end
-
-#  def update_approved_at
-#    self.approved_at = DateTime.now if status == 'Approved'
-#  end
-#
-#  def clear_fields_when_available
-#    if status == 'Available'
-#      self.issue = ""
-#      self.programmer = ""
-#      self.tester = ""
-#      self.test_started_at = ""
-#      self.approved_at = ""
-#    end
-#  end
 end
