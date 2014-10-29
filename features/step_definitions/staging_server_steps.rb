@@ -36,5 +36,5 @@ When(/^I change to approved$/) do
 end
 
 Then(/^I should see the current time$/) do
-  expect(page).to have_content(DateTime.now.utc)
+  expect(page).to have_content(DateTime.now.strftime("%Y-%m-%d %H:%M:%S"))
 end
