@@ -38,3 +38,18 @@ end
 Then(/^I should see the current time$/) do
   expect(page).to have_content(DateTime.now.strftime("%Y-%m-%d %H:%M:%S"))
 end
+
+When(/^I change to available$/) do
+  visit servers_path
+  click_on @server.name
+  select 'Available', from: 'Status'
+  click_button 'Update Server'
+end
+
+Then(/^I should see all other fields empty$/) do
+  expect(@server.issue).to be_nil
+  expect(@server.programmer).to be_nil
+  expect(@server.tester).to be_nil
+  expect(@server.test_started_at).to be_nil
+  expect(@server.approved_at).to be_nil
+end

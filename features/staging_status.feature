@@ -23,3 +23,9 @@ Feature: See staging server status
     When I change to approved
     Then I should see "Server 4 - Approved"
     And I should see the current time
+
+  Scenario: Change status from accepted to available
+    Given there is a staging server named "Server 5" with status "Approved"
+    When I change to available
+    Then I should see "Server 5 - Available"
+    And I should see all other fields empty
