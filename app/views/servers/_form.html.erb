@@ -1,0 +1,21 @@
+<%= form_for(@server) do |f| %>
+  <p>
+    <%= f.label :issue %><br />
+    <%= f.text_field :issue %>
+  </p>
+
+  <p>
+    <%= f.label :programmer %><br />
+    <%= f.text_field :programmer %>
+  </p>
+
+  <p>
+    <%= f.label :status %><br />
+    <%= f.select(:status, ['Available', 'Pending Testing']) %>
+  </p>
+
+
+
+  <%= f.submit %>
+<% end %>
+
